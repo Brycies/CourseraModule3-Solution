@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav-Toggle</title>
+    <style>
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      .nav-toggle {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .nav-menu {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-menu li {
+        margin-top: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .nav-toggle-label {
+          display: block;
+        }
+
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: 100%;
+          background-color: #444;
+          padding: 10px;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+      <ul class="nav-menu">
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
