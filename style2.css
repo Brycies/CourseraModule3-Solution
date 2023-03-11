@@ -5,6 +5,19 @@ body {
   font-weight: 400;
   line-height: 1.5;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+.container {
+  position: absolute;
+  top: 100px;
+  margin: 0;
+  width: 100%;
+}
 
 .navbar-brand {
   margin-top: 0;
@@ -42,34 +55,37 @@ section span {
   background-color: grey;
   width: 98%;
 }
-.navbar-toggle {
-  display: block;
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  margin-top: 5px;
-  background-color: transparent;
-  border: 2px solid black;
-  border-radius: 4px;
-  font-size: 1.5rem;
-  padding: 9px 10px;
-  background: none;
-}
-
-.icon-bar {
-  display: block;
-  width: 30px;
-  height: 4px;
-  margin-top: 6px;
-  background-color: black;
-  border-radius: 1px;
-}
 
 @media (min-width: 576px) {
   .container-xs,
   .container {
     margin: 0;
     width: 100%;
+  }
+  .navbar-toggle {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    padding: 9px 10px;
+    background: none;
+  }
+  .navbar-toggle:hover {
+    background-color: white;
+  }
+
+  .icon-bar {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-top: 6px;
+    background-color: black;
+    border-radius: 1px;
   }
 
   @media (min-width: 768px) {
